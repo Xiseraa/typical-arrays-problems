@@ -28,13 +28,13 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-    if(!array || array.length === 0){
+    if(!array){
         return 0;
       }
-    let sum = 0;
+    let sum = 0, counter = 0;
     for(let i = 0; i < array.length; i++) {
         sum += array[i];
+        counter++;
     }
-    let average = sum / array.length;
-    return average;
+    return count > 0 ? sum / counter : 0;
 }
